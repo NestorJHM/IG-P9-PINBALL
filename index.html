@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Mini Pinball · IG P9</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="etiqueta">INFORMÁTICA GRÁFICA · P9</p>
+        <h1>MINI <span>PINBALL</span></h1>
+      </div>
+      <p class="autor">Néstor J. Henríquez Medina</p>
+    </header>
+    <div class="juego">
+      <section class="mesa" aria-label="Mesa de pinball">
+        <div id="escena" aria-label="Tablero 3D con una bola, dos palas y tres reboteadores"></div>
+        <div class="palas">
+          <button id="izquierda" disabled><kbd>A / ←</kbd> Pala izquierda</button>
+          <button id="derecha" disabled>Pala derecha <kbd>D / →</kbd></button>
+        </div>
+      </section>
+      <aside>
+        <div class="panel marcador">
+          <p class="etiqueta">PUNTUACIÓN</p>
+          <output id="puntos" aria-label="Puntuación">000000</output>
+        </div>
+        <div class="panel">
+          <p class="etiqueta">LA PARTIDA</p>
+          <p id="estado" role="status">Cargando el motor de física…</p>
+          <button id="lanzar" class="principal" disabled>Lanzar bola <kbd>ESPACIO</kbd></button>
+          <button id="reiniciar" disabled>Nueva partida <kbd>R</kbd></button>
+        </div>
+        <div class="ayuda">
+          <h2>Cómo jugar</h2>
+          <p>Lanza la bola y evita que salga por el hueco inferior. Pulsa las palas en el momento justo para devolverla
+            hacia los reboteadores.</p>
+          <p class="detalle">Una bola · Sin límite de partidas</p>
+        </div>
+      </aside>
+    </div>
+    <footer>Flipper '80</footer>
+  </main>
+  <!-- Carga Ammo.js como script para inicializarlo desde window.Ammo(). -->
+  <script src="./lib/ammo/ammo.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
